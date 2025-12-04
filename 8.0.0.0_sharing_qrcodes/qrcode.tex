@@ -1,0 +1,33 @@
+\documentclass[a4paper]{scrartcl}
+\usepackage[margin=20mm]{geometry}
+\usepackage{qrcode}
+\usepackage{tabularray} % <— wichtig
+
+% Link einmal definieren
+\newcommand{\DriveLink}{https://drive.google.com/drive/folders/1Pqqn5CicX540Pdtz4d6UKSQVwXJDEsOY?usp=sharing}
+
+% Zelleninhalt: Titel + QR
+\newcommand{\QRcell}{%
+  \begin{minipage}[c]{\linewidth}\centering
+    \large{\textbf{Ersti-Heft}}\\[3mm]
+    \qrcode[height=60mm]{\DriveLink}% Größe hier feinjustieren (60–70 mm)
+  \end{minipage}%
+}
+
+\begin{document}
+\thispagestyle{empty}
+
+\begin{center}
+  \begin{tblr}{
+    colspec = {X[c] X[c]},  % 2 zentrierte Spalten, gleiche Breite
+    colsep  = 14mm,         % horizontaler Abstand zwischen Spalten
+    rowsep  = 14mm,         % vertikaler Abstand zwischen Zeilen
+    stretch = 0             % keine automatische Streckung
+  }
+    \QRcell & \QRcell \\
+    \QRcell & \QRcell \\
+    \QRcell & \QRcell
+  \end{tblr}
+\end{center}
+
+\end{document}

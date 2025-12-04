@@ -1,0 +1,182 @@
+%!TeX program = pdflatex
+\documentclass{scrbook}
+
+% ---------------------------
+% Konfiguration & eigene Kommandos
+% ---------------------------
+\input{1.0.0.0_config/config.tex}
+\input{1.0.0.0_config/footer_header.tex}
+\input{1.0.0.0_config/commands.tex}
+
+
+\raggedbottom
+
+% ---------------------------
+% Dokumentbeginn
+\begin{document}
+% ---------------------------
+
+
+% ---------------------------
+% Backcover
+\includepdf{./7.0.0.0_umschlag/Cover.pdf}
+% ---------------------------
+
+\newpage
+\thispagestyle{empty}
+\null
+\newpage
+
+
+\pagenumbering{gobble}
+%Vorwort 
+\input{2.0.0.0_content/pages/vorwort.tex}
+
+
+% Inhaltsverzeichnis
+\clearpage
+\begingroup
+    % Kapitelkopf-Abstand (nur in dieser Gruppe) deutlich verkleinern
+    \RedeclareSectionCommand[beforeskip=-0cm]{chapter} % ≈ 2 cm höher
+    \tableofcontents
+\endgroup
+
+
+% ---------------------------
+% Dekan und Fachschaft
+% ---------------------------
+
+
+\PART{Begrüßung}
+    \pagenumbering{arabic}  % => arabisch
+    \setcounter{page}{1}    % optional, hier korrekt
+	\input{1.0.0.1_begruessung/dekan.tex}
+	\input{1.0.0.1_begruessung/fs.tex}
+%   \section{Eure Dozierenden}
+%	\input{1.0.0.1_begruessung/mustervl.tex}
+
+% ---------------------------
+% Checkliste
+\PART{Checkliste}
+% ---------------------------
+    \newpage
+    %\section{Checkliste}
+    %Checkliste für den Studienstart später hier einfügen.  
+    %(Muss separat erstellt und kompiliert werden)
+    \input{2.0.0.0_content/pages/checkliste.tex}
+
+
+
+% ---------------------------
+% Campus
+\PART{Campus}
+% ---------------------------
+    \newpage
+    \input{2.0.0.0_content/pages/campus.tex}
+
+% ---------------------------
+% Wichtige Orte, Lernplätze und Portale
+\PART{Wichtige Orte, Lernplätze und Portale}
+% ---------------------------
+    % \newpage
+    % \input{2.0.0.0_content/pages/wichtige_orte_intern.tex}
+    \newpage
+    \input{2.0.0.0_content/pages/wichtige_orte_extern.tex}
+    % \newpage
+    % \input{2.0.0.0_content/pages/lernplätze.tex}
+    % \newpage
+    % \input{2.0.0.0_content/pages/portale.tex}
+
+
+% ---------------------------
+% Hochschulgruppen & Vereine
+% \PART{Hochschulgruppen \& Vereine}
+% % ---------------------------
+%     \newpage
+%     \input{2.0.0.0_content/pages/gruppen_vereine.tex}
+
+
+
+% ---------------------------
+% Gremien & Beratung
+% \PART{Gremien \& Beratung}
+% % ---------------------------
+%     \newpage
+%     \input{2.0.0.0_content/pages/asta.tex}
+%     \newpage
+%     \input{2.0.0.0_content/pages/stupa.tex}
+%     \newpage
+%     \input{2.0.0.0_content/pages/wahlen.tex}
+%     \newpage
+%     \input{2.0.0.0_content/pages/fachbereichsgremien.tex}
+%     \newpage
+%     \input{2.0.0.0_content/pages/hochschulgremien.tex}
+%     \newpage
+%     \input{2.0.0.0_content/pages/vertrauenspersonen.tex}
+%     \newpage
+%     \input{2.0.0.0_content/pages/studierendenberatung.tex}
+%     \newpage
+%     \input{2.0.0.0_content/pages/studierendenservice.tex}
+%     \newpage
+%     \input{2.0.0.0_content/pages/respekt.tex}
+%     \newpage
+%     \input{2.0.0.0_content/pages/raumderstille.tex}
+%     \input{2.0.0.0_content/pages/help_Beratung.tex}
+
+% ---------------------------
+% Prüfungen, Prüfungsordnung und Curriculum
+%\PART{Prüfungen, Prüfungsordnung und Curriculum}
+% ---------------------------
+
+    %\newpage
+    %\input{2.0.0.0_content/pages/prüfungen_nta.tex}
+
+    
+    %\newpage
+    %\input{2.0.0.0_content/pages/curriculum1.tex} %Kurz Version für Print
+    %\input{2.0.0.0_content/pages/curriculum2.tex} %Lang Version für PDF
+    %\newpage
+    %\input{2.0.0.0_content/pages/prüfungsordnung.tex} %Lang Version für PDF
+    %\includepdf[pages=-]{./3.0.0.0_other_content/pos_inf_2024_2025.pdf}
+    %\input{2.0.0.0_content/pages/änderungsordnung.tex} %Zukünfig für Übergangsordnung nicht mehr in Ersti-Heft28 anhängen
+    %\includepdf[pages=-]{./3.0.0.0_other_content/pos_inf_2024_2025_übergangsordnung.pdf}
+    
+
+% ---------------------------
+% % Semesterticket
+% \PART{Semesterticket}
+% % ---------------------------
+%     \newpage
+%     \input{2.0.0.0_content/pages/semesterticket.tex}
+
+
+% ---------------------------
+% VPN, WLAN und Service
+% \PART{VPN, WLAN, Office 365 und Service}
+% % ---------------------------
+
+%     \newpage
+%     \input{2.0.0.0_content/pages/vpn_und_service.tex}
+%     \newpage
+%     \input{2.0.0.0_content/pages/wlan.tex}
+%     \newpage
+%     \input{2.0.0.0_content/pages/druckpunkt.tex}
+%     \newpage
+
+
+
+% ---------------------------
+% Legende & Impressum
+\PART{Legende \& Impressum}
+% ---------------------------
+    \newpage
+    \input{3.0.0.0_other_content/legende.tex}
+    \newpage
+    \input{7.0.0.0_umschlag/impressing.tex}
+
+% ---------------------------
+% Backcover
+\includepdf{./7.0.0.0_umschlag/Backcover.pdf}
+% ---------------------------
+
+\end{document}

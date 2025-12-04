@@ -1,0 +1,25 @@
+\newcommand{\Spine}{4.2mm} % exakten Wert von der Druckerei einsetzen
+
+\usepackage{geometry}
+\geometry{
+  paperwidth  = \dimexpr 148mm + \Spine + 148mm + 4mm\relax, % +2mm links +2mm rechts
+  paperheight = 214mm,                                       % 210 + 2 + 2
+  layoutsize  = {\dimexpr 148mm + \Spine + 148mm\relax,210mm},
+  layoutoffset= {2mm,2mm},
+  nomarginpar, includehead=false, includefoot=false
+}
+
+\usepackage[cam,center,noinfo,
+            width=\dimexpr 148mm+\Spine+148mm\relax,
+            height=210mm]{crop}
+
+% Optional: Hilfslinien für Rücken nur zur Kontrolle (vor Abgabe auskommentieren)
+\usepackage{tikz}
+\newcommand{\CoverGuides}{%
+\begin{tikzpicture}[remember picture,overlay]
+  % Rückenlinien innerhalb der Trimfläche
+  \draw
+   ([shift={(2mm,2mm)}]current page.south west) ++(148mm,0) -- ++(0,210mm);
+  \draw
+   ([shift={(2mm,2mm)}]current page.south west) ++(148mm+\Spine,0) -- ++(0,210mm);
+\end{tikzpicture}}

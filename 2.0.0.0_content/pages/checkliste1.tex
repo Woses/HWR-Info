@@ -1,0 +1,89 @@
+%!TeX program = pdflatex
+\documentclass{scrbook}
+
+\usepackage{hyperref}   % aktiviert PDF-Formulare
+\usepackage{enumitem}   % saubere Listen
+\hypersetup{pdfborder={0 0 0}} % keine roten Kästen um Links/Formulare
+
+\begin{document}
+
+\chapter*{Check-Liste für das Studium}
+
+\section*{Organisatorisches}
+
+\begin{itemize}[label={}]
+  \item \CheckBox[name=immatrikulation,width=1em,height=1em]{} \quad \textbf{Immatrikulation abschließen} -- Studierendenausweis abholen, Uni-Account aktivieren
+  \item \CheckBox[name=semesterbeitrag,width=1em,height=1em]{} \quad \textbf{Semesterbeitrag prüfen} -- falls noch offen, bezahlen
+  \item \CheckBox[name=bescheinigung,width=1em,height=1em]{} \quad \textbf{Studienbescheinigung speichern} -- BAföG, Wohngeld, Krankenkasse usw.
+  \item \CheckBox[name=semesterticket,width=1em,height=1em]{} \quad \textbf{Semesterticket aufladen / aktivieren} -- Wallet-App oder QR-Code
+  \item \CheckBox[name=office,width=1em,height=1em]{} \quad Office/Windows-Lizenzen sichern
+  \item \CheckBox[name=lizenzen,width=1em,height=1em]{} \quad Andere Lizenzen mit Studierendenrabatt sichern (JetBrains, GitHub Pro, Fusion 360, etc.)
+  \item \CheckBox[name=email,width=1em,height=1em]{} \quad Hochschul-E-Mail regelmäßig nutzen
+  \item \CheckBox[name=wlan,width=1em,height=1em]{} \quad WLAN/Eduroam einrichten
+  \item \CheckBox[name=vpn,width=1em,height=1em]{} \quad VPN einrichten
+\end{itemize}
+
+\section*{Studienorganisation}
+
+\begin{itemize}[label={}]
+  \item \CheckBox[name=lea,width=1em,height=1em]{} \quad LEA (ILIAS) \& Apollo verstehen
+  \item \CheckBox[name=modulhandbuch,width=1em,height=1em]{} \quad Modulhandbuch durchsehen
+  \item \CheckBox[name=fristen,width=1em,height=1em]{} \quad Fristen kennen (Prüfungsanmeldung, Rückmeldung, Rücktritt)
+  \item \CheckBox[name=ersti,width=1em,height=1em]{} \quad Erstsemesterveranstaltungen besuchen
+  \item \CheckBox[name=stundenplan,width=1em,height=1em]{} \quad Stundenplan bauen
+  \item \CheckBox[name=bibzugang,width=1em,height=1em]{} \quad Bibliothekszugang einrichten
+\end{itemize}
+
+\section*{Bibliothek}
+
+\begin{itemize}[label={}]
+  \item \CheckBox[name=bib,width=1em,height=1em]{} \quad Bibliothek besuchen
+  \item \CheckBox[name=pin,width=1em,height=1em]{} \quad PIN für Selbstverbucher erstellen
+  \item \CheckBox[name=login,width=1em,height=1em]{} \quad Login in BibDiscover und LEA testen
+  \item \CheckBox[name=leaKurse,width=1em,height=1em]{} \quad In LEA nach Kursen suchen und beitreten
+  \item \CheckBox[name=fernzugang,width=1em,height=1em]{} \quad Bib-Fernzugriff einrichten
+\end{itemize}
+
+\section*{Fachschaft \& Campusleben}
+
+\begin{itemize}[label={}]
+  \item \CheckBox[name=fachschaft,width=1em,height=1em]{} \quad Fachschaft kennenlernen
+  \item \CheckBox[name=heft,width=1em,height=1em]{} \quad Ersti-Heft und Angebote durchsehen
+  \item \CheckBox[name=veranstaltungen,width=1em,height=1em]{} \quad Ersti-Veranstaltungen besuchen
+  \item \CheckBox[name=gruppen,width=1em,height=1em]{} \quad Hochschulgruppen (E-Sports, Motorsport, Chor, etc.) anschauen
+  \item \CheckBox[name=wohnheim,width=1em,height=1em]{} \quad Wohnheim-Veranstaltungen besuchen
+\end{itemize}
+
+\section*{Praktisches fürs Studium}
+
+\begin{itemize}[label={}]
+  \item \CheckBox[name=notizen,width=1em,height=1em]{} \quad Notizen-System einrichten
+  \item \CheckBox[name=passwort,width=1em,height=1em]{} \quad Passwort-Manager nutzen
+  \item \CheckBox[name=software,width=1em,height=1em]{} \quad Software installieren (IDE, LaTeX, Python, GitHub)
+  \item \CheckBox[name=server,width=1em,height=1em]{} \quad VPN/Serverzugang testen
+  \item \CheckBox[name=drucker,width=1em,height=1em]{} \quad Uni-Drucker/Kopierer einrichten
+  \item \CheckBox[name=mensa,width=1em,height=1em]{} \quad Mensa-Plan checken
+\end{itemize}
+
+\section*{Finanzen \& Formalitäten}
+
+\begin{itemize}[label={}]
+  \item \CheckBox[name=bafoeg,width=1em,height=1em]{} \quad BAföG-Antrag stellen
+  \item \CheckBox[name=wohngeld,width=1em,height=1em]{} \quad Wohngeld beantragen
+  \item \CheckBox[name=kindergeld,width=1em,height=1em]{} \quad Kindergeld verlängern
+  \item \CheckBox[name=krankenkasse,width=1em,height=1em]{} \quad Krankenversicherung klären
+  \item \CheckBox[name=job,width=1em,height=1em]{} \quad Nebenjob/Werkstudent anmelden
+  \item \CheckBox[name=bank,width=1em,height=1em]{} \quad Bankdaten für Gehalt prüfen
+\end{itemize}
+
+\section*{Persönlich \& Sozial}
+
+\begin{itemize}[label={}]
+  \item \CheckBox[name=kontakte,width=1em,height=1em]{} \quad Kontakte knüpfen
+  \item \CheckBox[name=gruppenSocial,width=1em,height=1em]{} \quad WhatsApp-/Discord-Gruppen beitreten
+  \item \CheckBox[name=events,width=1em,height=1em]{} \quad Events \& Partys besuchen
+  \item \CheckBox[name=sport,width=1em,height=1em]{} \quad Sportangebote / Hochschulsport ansehen
+  \item \CheckBox[name=beratung,width=1em,height=1em]{} \quad Beratungsstellen merken
+\end{itemize}
+
+\end{document}

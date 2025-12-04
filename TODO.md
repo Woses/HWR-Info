@@ -1,0 +1,6 @@
+- [x] To-Do Liste erstellen
+- [x] Organisation nutzen
+- [x] Neues Repo anlegen
+- [x] Struktur vorfertigen und festlegen
+- [x] Altlasten entfernen
+- [x] Müll rausbringen
